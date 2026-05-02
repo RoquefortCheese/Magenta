@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b8jipcg4g2mr4"]
+
+[ext_resource type="Script" uid="uid://cox1uh120gdl2" path="res://chunk.gd" id="1_kdh3y"]
+[ext_resource type="Shader" uid="uid://dn21ypjdty1sr" path="res://water.gdshader" id="2_eat54"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kdh3y"]
+size = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a0kup"]
+render_priority = 0
+shader = ExtResource("2_eat54")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7yqgf"]
+
+[node name="Chunk" type="Node" unique_id=318774513]
+script = ExtResource("1_kdh3y")
+square = SubResource("PlaneMesh_kdh3y")
+
+[node name="WaterMesh" type="MeshInstance3D" parent="." unique_id=1034510233]
+material_override = SubResource("ShaderMaterial_a0kup")
+extra_cull_margin = 1.0
+ignore_occlusion_culling = true
+mesh = SubResource("ArrayMesh_7yqgf")

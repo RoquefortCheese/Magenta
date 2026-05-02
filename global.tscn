@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dfsf1j6hoopug"]
+
+[ext_resource type="Script" uid="uid://dfig8auc07o07" path="res://global.gd" id="1_6q3x5"]
+[ext_resource type="Texture2D" uid="uid://dgxywb5plkjr5" path="res://stone.png" id="2_2wtbm"]
+[ext_resource type="Texture2D" uid="uid://f0ioqn0qoyrk" path="res://moss.png" id="3_2wtbm"]
+[ext_resource type="Texture2D" uid="uid://cy8jeobww0y45" path="res://sidemoss.png" id="4_8tbuy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2wtbm"]
+shading_mode = 2
+albedo_texture = ExtResource("2_2wtbm")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tbuy"]
+shading_mode = 2
+albedo_texture = ExtResource("3_2wtbm")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hhif3"]
+shading_mode = 2
+albedo_texture = ExtResource("4_8tbuy")
+texture_filter = 2
+
+[node name="Global" type="Node" unique_id=680983780]
+script = ExtResource("1_6q3x5")
+materials = Dictionary[int, StandardMaterial3D]({
+0: SubResource("StandardMaterial3D_2wtbm"),
+1: SubResource("StandardMaterial3D_8tbuy"),
+2: SubResource("StandardMaterial3D_hhif3")
+})
+sidematerials = Dictionary[int, int]({
+1: 0,
+2: 2
+})
+topmaterials = Dictionary[int, int]({
+1: 0,
+2: 1
+})
+bottommaterials = Dictionary[int, int]({
+1: 0,
+2: 0
+})

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://da22ovy2pvdb"]
+
+[ext_resource type="Script" uid="uid://80emjoja0hcd" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+radius = 0.4
+height = 2.5
+
+[node name="Player" type="CharacterBody3D" unique_id=2136737231]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2095576562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1385592724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+keep_aspect = 0
+fov = 90.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1174104486]
+
+[node name="WaterTint" type="ColorRect" parent="CanvasLayer" unique_id=1742093349]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
