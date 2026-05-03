@@ -19,3 +19,6 @@ Technical explanation:
 - The sky is also controlled by a shader.
 
 I made this for no particular reason other than wanting to make something, liking the concept of procedural infinite world generation, and having a particular visual aesthetic in mind. I didn't turn it into a complete game because I didn't have any interesting ideas, I was already worrying about lag far more than I would like to, generating multi-chunk structures over an infinite world is difficult, and there is only so much fun to be had from wandering the same world forever.
+
+AI Use:
+I used AI a bit for documentation and debugging. All code is handwritten.
